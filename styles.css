@@ -1,0 +1,145 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: white;
+  position: relative;
+}
+
+#pizza-area {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 나무 */
+#tree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110vh;
+  height: 110vh;
+  transform: translate(-50%, -50%);
+  background: url('images/b.png') center center no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+/* 도우 */
+#dough {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vh;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  background: url('images/pizza.png') center center no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* 도우 위에 올라간 토핑 */
+.topping-on-dough {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* 토핑 줄 */
+.topping-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  z-index: 3;
+  background: white;
+}
+
+#topping-top {
+  top: 0;
+}
+#topping-bottom {
+  bottom: 0;
+}
+
+/* 토핑 열 */
+.topping-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  z-index: 3;
+  background: white;
+}
+
+#topping-left {
+  left: 0;
+}
+#topping-right {
+  right: 0;
+}
+
+/* 토핑 버튼 스타일 */
+.topping-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.topping-button:hover {
+  transform: scale(1.2);
+}
+
+/* 완성 버튼 */
+#complete-button {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: url('images/f.png') center center no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  z-index: 4;
+  cursor: pointer;
+}
+
+/* 셔우드 이미지 */
+#sherwood-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40vh;       /* 가로 기준 크기 */
+  height: auto;      /* 비율 유지 */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+}
